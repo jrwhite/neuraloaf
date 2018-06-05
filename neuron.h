@@ -11,6 +11,7 @@ typedef struct Neuron {
     float pot;
     float current;
     float threshold;
+    void (*fire_callback)(int);
 } Neuron;
 
 void neuron_step(Neuron *n);
